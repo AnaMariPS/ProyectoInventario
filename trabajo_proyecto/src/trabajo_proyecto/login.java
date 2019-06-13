@@ -17,7 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.awt.event.ActionEvent;
-
+// HOLA MAJOS
 public class login extends JFrame {
 
 	private JPanel contentPane;
@@ -88,11 +88,21 @@ public class login extends JFrame {
 				JOptionPane.showMessageDialog(null, "El nombre y  la contraseña son correctos");
 				frame.dispose();
 				
+			}else {
+				JOptionPane.showMessageDialog(null , "Nombre o contraseña incorrectos. Intentelo de nuevo");
+			}// FIN DEL IF-ELSE
+			
+		rs.close();
+		pst.close();
+		
+				}catch (Exception e) {
+					JOptionPane.showMessageDialog(null, e);
+				}
+	
+			
 				
-			}// cierre del if
-				
-				
-		});// fin de public void actionPerformed
+		}});// fin de public void actionPerformed
+		
 		btnNewButton.setBounds(124, 184, 89, 23);
 		contentPane.add(btnNewButton);
 		
@@ -101,7 +111,7 @@ public class login extends JFrame {
 		lblFONDO.setBounds(-156, 0, 580, 333);
 		contentPane.add(lblFONDO);
 		
-			}catch (Exception e)
+		
 			
 		
 	}// fin del boton ENTRAR
